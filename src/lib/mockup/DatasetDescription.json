@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "The Art of Programming",
+    "description": "A comprehensive guide to mastering the art of programming, covering algorithms, data structures, and best practices AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.",
+    "author": "John Coder",
+    "date": "2023-01-15",
+    "version": 3
+  },
+  {
+    "id": 2,
+    "title": "Exploring the Cosmos",
+    "description": "An exploration of the wonders of the universe, from galaxies to black holes, written for both enthusiasts and experts.",
+    "author": "Astrid Starwatcher",
+    "date": "2023-02-28",
+    "version": 3
+  },
+  {
+    "id": 3,
+    "title": "Cooking with Flavors",
+    "description": "A collection of delicious recipes from around the world, featuring a variety of flavors and cooking techniques.",
+    "author": "Chef Gourmet",
+    "date": "2023-03-10",
+    "version": 3
+  },
+  {
+    "id": 4,
+    "title": "Green Living Handbook",
+    "description": "Tips and tricks for adopting an eco-friendly lifestyle, reducing your carbon footprint, and promoting sustainability.",
+    "author": "Emma Earthwise",
+    "date": "2023-04-05",
+    "version": 3
+  },
+  {
+    "id": 5,
+    "title": "Mystery in the Shadows",
+    "description": "A gripping detective novel that takes readers on a thrilling journey through a world of crime, secrets, and unexpected twists.",
+    "author": "Detective Noir",
+    "date": "2023-05-20",
+    "version": 3
+  },
+  {
+    "id": 6,
+    "title": "The Art of Meditation",
+    "description": "Unlock the power of mindfulness and meditation with practical techniques and insights for a calmer and more focused life.",
+    "author": "Zen Master",
+    "date": "2023-06-15",
+    "version": 3
+  },
+  {
+    "id": 7,
+    "title": "Historical Encounters",
+    "description": "A captivating look at significant historical events and the people who shaped them, providing a fresh perspective on the past.",
+    "author": "Time Traveler",
+    "date": "2023-07-02",
+    "version": 3
+  },
+  {
+    "id": 8,
+    "title": "Space Odyssey",
+    "description": "Journey through the cosmos with stunning visuals and scientific explanations, exploring the mysteries of outer space.",
+    "author": "Cosmic Explorer",
+    "date": "2023-08-18",
+    "version": 3
+  },
+  {
+    "id": 9,
+    "title": "Floral Symphony",
+    "description": "An illustrated guide to the world of flowers, showcasing their beauty, symbolism, and the art of floral arrangement.",
+    "author": "Botanical Artist",
+    "date": "2023-09-09",
+    "version": 3
+  },
+  {
+    "id": 10,
+    "title": "Beyond the Horizon",
+    "description": "A collection of short stories that transport readers to different worlds, challenging perceptions and sparking imagination.",
+    "author": "Imagination Weaver",
+    "date": "2023-10-25",
+    "version": 3
+  }
+]
