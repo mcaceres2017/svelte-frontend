@@ -1,4 +1,5 @@
-<script>
+<script lang=ts>
+	import { FileDropzone } from '@skeletonlabs/skeleton';
 	let name = ''; // State to hold form input value
 	let description = '';
 
@@ -16,19 +17,11 @@
 	  alert(`Form submitted with name: ${name} and description ${description}`);
 	};
 
+	let files: FileList;
 
-	let text = 'None';
-
-	const handleFileChange = async (event) => {
-		
-		console.log("aaaaa");
-		const file = event.target.files[0];
-		
-		if (file) {
-			const text = await file.text();
-			console.log('CSV Data:', text);
-		}
-	};
+	function onChangeHandler(e: Event): void {
+		console.log('file data:', e);
+	}
 </script>
   
 
@@ -42,10 +35,11 @@
 			<input class="input" type="text" placeholder="Name of the dataset" bind:value={name}/>
 		</label>
 
-		<label class="label">
-			<span>Oids list</span>
-			<input class="input" type="file" accept=".csv" bind:value={text} on:change={handleFileChange}/>
-		</label>
+		<FileDropzone name="files" bind:files={files} on:change={onChangeHandler}>
+			<svelte:fragment slot="lead">(icon)</svelte:fragment>
+			<svelte:fragment slot="message">(message)</svelte:fragment>
+			<svelte:fragment slot="meta">(meta)</svelte:fragment>
+		</FileDropzone>
 
 
 		<div class="space-y-2">
@@ -63,7 +57,7 @@
 		</div>
 
 		<div>
-			ajajajaj {text}
+			ajajajaj {files}
 		</div>
 		
 		<label class="label">

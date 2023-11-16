@@ -21,6 +21,7 @@
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "autoprefixer": "10.4.16",
+    "daisyui": "^4.1.0",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-svelte": "^2.30.0",
@@ -37,6 +38,8 @@
   },
   "type": "module",
   "dependencies": {
+    "csv2table": "^0.1.2",
+    "papaparse": "^5.4.1",
     "svelte-routing": "^2.6.0"
   }
 }
