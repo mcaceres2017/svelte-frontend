@@ -1,8 +1,7 @@
-<script lang=ts>
+<script lang="ts">
 	import DatasetCard from '$lib/components/DatasetCard.svelte';
-	import DatasetDescription from '$lib/mockup/DatasetDescription.json'
+	import DatasetDescription from '$lib/mockup/DatasetDescription.json';
 </script>
-
 
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
@@ -13,28 +12,24 @@
 			<ul class="dataset-list">
 				{#each DatasetDescription as dataset}
 					<li>
-						<DatasetCard 
-							id = {dataset.id}
-							name = {dataset.title} 
-							description = {dataset.description} 
-							author = {dataset.author}
-							date = {dataset.date}
-							version = {dataset.version}>
-						</DatasetCard>
+						<DatasetCard
+							id={dataset.id}
+							name={dataset.title}
+							description={dataset.description}
+							author={dataset.author}
+							date={dataset.date}
+							version={dataset.version}
+						/>
 					</li>
-			  	{/each}
+				{/each}
 			</ul>
 		</nav>
 	</div>
 </div>
 
-
 <style>
-	.dataset-list{
+	.dataset-list {
 		padding-left: 200px;
 		padding-right: 200px;
 	}
 </style>
-
-
-
