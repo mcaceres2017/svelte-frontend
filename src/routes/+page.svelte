@@ -3,12 +3,9 @@
 	import DatasetDescription from '$lib/mockup/DatasetDescription.json';
 </script>
 
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
-
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-5">
 		<nav class="list-nav">
-			<!-- (optionally you can provide a label here) -->
 			<ul class="dataset-list">
 				{#each DatasetDescription as dataset}
 					<li>

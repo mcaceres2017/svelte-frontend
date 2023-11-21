@@ -6,13 +6,57 @@
 	const { dataset } = data;
 </script>
 
-<!-- <div class="container">
-		<div class="dataset-name" />
+<div class="my-container">
+	<div class="my-row">
+		<div class="my-col">
+			<div class="card p-4 title-card">
+				<p class="icon-text">
+					<Fa icon={faBox} size="4x" />
+				</p>
+				<div class="title">
+					{dataset.title} a little more of text to see what the div does
+				</div>
+			</div>
+		</div>
+		<div class="my-col">
+			<div class="my-row">
+				<div class="card p-4 general-info overflow-auto max-h-[200px]">
+					<div><strong>Author:</strong> {dataset.author}</div>
+					<div><strong>Created:</strong> {dataset.created}</div>
+					<div>
+						<strong>Description:</strong>
+						{dataset.description}
+					</div>
+				</div>
+			</div>
+			<div class="my-row btn-row">
+				<div>
+					<button class="btn variant-filled">Update</button>
+				</div>
+				<div>
+					<button class="btn variant-filled">Update</button>
+				</div>
+			</div>
+			<div class="my-row">
+				<div class="card p-4 version-info">
+					<div class="version-selector">
+						<strong>Version:</strong>
 
-	<div class="general-info" />
-
-	<div class="version-info" />
-</div> -->
+						<select class="select">
+							{#each dataset.version as version}
+								<option value={version}>{version}</option>
+							{/each}
+						</select>
+					</div>
+					<div><strong>Updated:</strong> {dataset.updated}</div>
+					<div><strong>Oids:</strong> {dataset.oids.join(', ')}</div>
+					<div><strong>Parameters:</strong> {dataset.parameters.join(', ')}</div>
+					<div><strong>Size:</strong> {dataset.size}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <!-- <div class="center-container">
 	<div class="card p-4">
@@ -32,100 +76,96 @@
 			</select>
 		</div>
 
-		<div><strong>Updated:</strong> {dataset.updated}</div>
+		## <div><strong>Updated:</strong> {dataset.updated}</div>
 
-		<div><strong>Created:</strong> {dataset.created}</div>
+		## <div><strong>Created:</strong> {dataset.created}</div>
 
-		<div><strong>Author:</strong> {dataset.author}</div>
+		## <div><strong>Author:</strong> {dataset.author}</div>
 
-		<div><strong>Oids:</strong> {dataset.oids.join(', ')}</div>
+		## <div><strong>Oids:</strong> {dataset.oids.join(', ')}</div>
 
-		<div><strong>Parameters:</strong> {dataset.parameters.join(', ')}</div>
+		## <div><strong>Parameters:</strong> {dataset.parameters.join(', ')}</div>
 
-		<div><strong>Size:</strong> {dataset.size}</div>
+		## <div><strong>Size:</strong> {dataset.size}</div>
 
 		<div>
 			<button class="btn variant-filled">Update</button>
 		</div>
 	</div>
-</div>
- -->
+</div> -->
 
 <style>
-	/* .center-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		height: 100vh;
-		max-width: 500px; 
-		margin: 0 auto; 
-	}
-
-	.card {
-		max-width: 100%;
-	}
-
 	.btn {
-		margin: 10px;
+		margin-left: 100px;
 	}
 
 	.title {
-		font-size: 25px; 
+		font-size: 25px;
 		font-weight: bold;
 		margin-bottom: 20px;
 	}
 
 	.icon-text {
-		float: left;
-		display: flex;
+		justify-content: center;
 		margin-right: 15px;
 		align-items: center;
 	}
 
-	.dataset-name {
-		width: 300px; 
-		height: 500px; 
-		margin-top: 80px; 
-		margin-left: 100px; 
-		margin-right: 0px;
-		margin-bottom: 0px;
-		background-color: #f0f0f0; 
+	.title-card {
+		max-width: 250px;
+		max-height: 1000px;
+		margin-top: 80px;
+		margin-left: 100px;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.general-info {
 		width: 800px;
-		height: 200px; 
-		margin-top: 0px; 
-		margin-left: 100px; 
-		background-color: #f0f0f0; 
+		height: 200px;
+		margin-top: 80px;
+		margin-left: 100px;
 	}
 
 	.version-info {
-		width: 200px; 
-		height: 200px;
-		margin-top: 30vh; 
-		margin-left: 20vw;
-		background-color: #f0f0f0;
-	}
- */
-	/* .container {
-		background-color: #7c2828;
-	}
-
-	.left-container {
-		width: 300px;
-		height: 500px;
-		margin-left: 50px;
-		margin-top: 50px;
-		background-color: #f0f0f0;
-	}
-
-	.right-container {
 		width: 800px;
 		height: 200px;
-		margin-top: 50px;
-		margin-right: 1000px;
-		background-color: #f0f0f0;
-	} */
+		margin-top: 20px;
+		margin-left: 100px;
+	}
+
+	.my-container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.my-row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+	}
+
+	.my-col {
+		flex: 1;
+		padding: 0 15px;
+	}
+
+	.version-selector {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+
+	.select {
+		margin-left: 20px;
+		width: 100px;
+	}
+
+	.btn-row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: 85px;
+		background-color: rgb(124, 125, 204);
+	}
 </style>
