@@ -86,11 +86,17 @@
 	};
 </script>
 
-<form on:submit|preventDefault={handleSubmit} method="POST" class="form">
+<form method="POST" class="form">
 	<div class="card p-4">
-		<input class="input" type="text" placeholder="Name of the dataset" bind:value={datasetName} />
+		<input
+			name="name"
+			class="input"
+			type="text"
+			placeholder="Name of the dataset"
+			bind:value={datasetName}
+		/>
 
-		<FileDropzone name="files" accept=".csv" multiple={false} on:change={handleFileInputChange}>
+		<FileDropzone name="file" accept=".csv" multiple={false} on:change={handleFileInputChange}>
 			<svelte:fragment slot="lead">
 				<div class="flex justify-center items-center gap-4">
 					<Fa icon={faFileArrowUp} size="2x" />
@@ -107,10 +113,11 @@
 		</FileDropzone>
 
 		<div class="space-y-2">
-			{#each datasetParameters as parameter, index (parameter.id)}
+			{#each datasetParameters as parameter}
 				<label class="flex items-center space-x-2">
 					<input
 						id={'checkbox' + parameter.id}
+						name={parameter.name.toLowerCase().replace(/\s/g, '-')}
 						class="checkbox"
 						type="checkbox"
 						bind:checked={parameter.checked}
@@ -120,14 +127,15 @@
 			{/each}
 		</div>
 
-		<!-- <div>
-			{datasetParameters.filter(offer => offer.checked).map(offer => offer.name)}
-		</div> -->
-
+		<!-- 		<div>
+			{datasetParameters.filter((offer) => offer.checked).map((offer) => offer.name)}
+		</div>
+ -->
 		<label class="label">
 			<textarea
 				class="textarea"
 				rows="4"
+				name="description"
 				placeholder="Description: Tell what your dataset is for/about"
 				bind:value={datasetDescription}
 			/>

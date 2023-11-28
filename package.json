@@ -43,6 +43,7 @@
     "csv2table": "^0.1.2",
     "papaparse": "^5.4.1",
     "svelte-fa": "^3.0.4",
-    "svelte-routing": "^2.6.0"
+    "svelte-routing": "^2.6.0",
+    "zod": "^3.22.4"
   }
 }
